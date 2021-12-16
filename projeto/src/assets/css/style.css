@@ -1,0 +1,581 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-bar {
+    background: #16161de5;
+    padding: 5px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.nav-bar .register-login {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 28px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    text-transform: uppercase;
+}
+
+.list-links {
+    width: 72%;
+}
+
+.list-links ul {
+    padding: 5px;
+    margin: 2px;
+    transition: all 0.3s ease;
+}
+
+.list-links ul li {
+    display: inline-block;
+}
+
+.list-links ul li a {
+    text-decoration: none;
+    list-style: none;
+    color: rgb(255, 140, 0);
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px;
+    transition: all 0.4s ease;
+}
+
+.list-links ul li a:hover {
+    color: white;
+}
+
+.register-login .register {
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 6px;
+    margin: 4px;
+    border-radius: 5px;
+    border: none;
+    background: blue;
+    color: white;
+}
+
+.register-login .login {
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 6px;
+    margin: 4px;
+    border-radius: 5px;
+    border: 1px solid blue;
+    background: none;
+    color: blue;
+}
+
+.menu-mobile {
+    background: rgb(216, 216, 216);
+    border: gray;
+    padding: 10px;
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    top: 35vh;
+    right: 0;
+    transform: translateX(40%);
+    display: none;
+}
+
+.menu-mobile .row-1, .row-2, .row-3 {
+    background: rgb(0, 0, 0);
+    width: 55px;
+    height: 2px;
+    margin: 5px;
+}
+
+@media (max-width: 900px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-bar {
+        gap: 0;
+    }
+    .list-links {
+        width: 30%;
+    }
+    .list-links ul {
+        width: 50vw;
+        height: 70vh;
+        text-align: center;
+        border-radius: 20px;
+        position: absolute;
+        top: 10vh;
+        right: 0;
+        background: #2f4e68;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        transform: translateX(110%);
+        transition: all 0.5s ease-in-out;
+    }
+    .list-links ul li {
+        margin: 15px;
+        border-bottom: 2px solid rgba(110, 110, 110, 0.418);
+    }
+    .menu-mobile {
+        display: block;
+        cursor: pointer;
+    }
+    .register-login .register {
+        font-size: 14px;
+    }
+    .register-login .login {
+        font-size: 14px;
+    }
+}
+
+.list-links.active {
+    transform: translateX(0);
+}
+
+.section-1 {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to top, #fdbe83, #c8a3b5, #2f4e68);
+    padding: 10px;   
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+.section-1 .intro {
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+}
+
+.section-1 .intro h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 80px;
+    font-weight: bolder;
+    text-align: start;
+    color: #213647d5;
+}
+
+.section-1 .mini-text {
+    font-size: 16px;
+    font-weight: bolder;
+    font-family: sans-serif;
+    color: #16242f;
+}
+
+.midias-sociais {
+    position: fixed;
+    top: 40%;
+    right: 5%;
+    background: #16161d1f;
+    border-radius: 5px;
+}
+
+.midias-sociais div {
+    margin: 20px 3px;
+}
+
+@media (max-width: 900px) {
+    .midias-sociais {
+        top: 84%;
+        bottom: 6%;
+        left: 10%;
+        right: 10%;
+        border-radius: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .midias-sociais div {
+        /* margin: 10px 0; */
+        display: inline-block;
+    }
+    .section-1 .intro {
+        width: 70%;
+        padding: 5px;
+        margin: 5px;
+    }
+    .section-1 .intro h1 {
+        font-size: 40px;
+    }   
+}
+
+.section-2 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.section-2 .services {
+    padding: 5px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.section-2 .services div {
+    font-size: 18px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.section-2 .services div div {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgb(197, 197, 197);
+    margin: 10px;
+    padding: 20px;
+}
+
+@media (max-width: 900px) {
+    .section-2 .services {
+        margin: 5px;
+    }
+    .section-2 .services div div {
+        width: 120px;
+        height: 120px;
+        margin: 5px;
+        padding: 15px;
+    }
+}
+
+.section-3 {
+    width: 100%;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.section-3 .title {
+    font-family: sans-serif;
+    font-size: 32px;
+}
+
+.section-3 .fotos {
+    padding: 5px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.section-3 .fotos div img {
+    margin: 10px;
+    padding: 5px;
+    width: 240px;
+    height: 300px;
+    background: rgba(128, 128, 128, 0.335);
+    transition: all 0.3s ease;
+}
+
+.section-3 .fotos div:hover {
+    background: rgba(128, 128, 128, 0);
+}
+
+.section-3 .fotos div div {
+    font-size: 130px;
+    font-family: sans-serif;
+    color: #505050;
+    transition: all 0.7s ease;
+}
+
+.section-3 .fotos div img:hover {
+    background: rgba(128, 128, 128, 0);
+}
+
+@media (max-width: 900px) {
+    .section-3 .title {
+        font-size: 24px;
+        margin: 0 10px;
+        text-align: center;
+    }
+    .section-3 .fotos div div {
+        text-align: center;
+    }
+}
+
+.final-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.final-section .info-newsleter {
+    width: 70%;
+    height: 40%;
+    padding: 12px;
+    margin: 12px;
+    border-radius: 12px;
+    background: #fdbe83;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.final-section  .info-newsleter h3 {
+    font-family: sans-serif;
+    font-size: 36px;
+    text-align: center;
+    color: #2f4e689a;
+}
+
+.final-section  .info-newsleter p {
+    font-size: 18px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.final-section  .info-newsleter p span {
+    color: aliceblue;
+    font-size: 24px;
+}
+
+.final-section  .info-newsleter .link-newsleter button {
+    font-size: 24px;
+    padding: 10px;
+    margin: 25px;
+    border: 5px solid rgb(255, 120, 70);
+    background: none;
+    transition: all 0.2s ease;
+}
+
+.final-section  .info-newsleter .link-newsleter button a {
+    text-decoration: none;
+    color: orangered;
+    font-weight: bolder;
+    transition: all 0.2s ease;
+}
+
+.final-section  .info-newsleter .link-newsleter button:hover {
+    background: orangered;
+}
+
+.final-section  .info-newsleter .link-newsleter button a:hover {
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .final-section .info-newsleter {
+        width: 95%;
+        height: 64vh;
+    }
+    .final-section  .info-newsleter h3 {
+        font-size: 28px;
+    }
+    .final-section  .info-newsleter p {
+        font-size: 16px;
+    }
+    .final-section  .info-newsleter p span {
+        font-size: 20px;
+    }
+}
+
+.footer {
+    width: 100%;
+    padding: 5px;
+    background: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.footer .container-footer p {
+    color: whitesmoke;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.footer .container-footer p span {
+    color: rgb(255, 213, 159);
+    font-size: 18px;
+}
+
+.registrar {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #16242fbb;
+    border: 1px solid #16161d;
+    display: flex;
+    padding: 10px;
+    display: none;
+}
+
+.registrar form {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.registrar form div {
+    display: block;
+}
+
+.registrar form div label {
+    font-family: sans-serif;
+}
+
+.registrar form div input {
+    outline: none;
+    padding: 5px;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: white;
+    background-color: #16161d;
+    border: none;
+}
+
+.registrar form div #register {
+    padding: 8px;
+    color: #16161d;
+    background: bisque;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.registrar form div #register:active {
+    background: #16161d;
+    color: white;
+}
+
+
+.logar {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #16242fbb;
+    border: 1px solid #16161d;
+    display: none;
+    padding: 10px;
+}
+
+.logar form {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.logar form div {
+    display: block;
+}
+
+.logar form div #logar {
+    margin: 3px;
+    padding: 8px;
+    color: #16161d;
+    background: bisque;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logar form div #regist {
+    margin: 2px;
+    padding: 8px;
+    color: #ffffff;
+    background: rgb(255, 0, 0);
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logar form div #logar:active {
+    background: #16161d;
+    color: white;
+}
+
+.logar form div label {
+    font-family: sans-serif;
+}
+
+.logar form div input {
+    outline: none;
+    padding: 5px;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: white;
+    background-color: #16161d;
+    border: none;
+}
+
+.msg, .msg2 {
+    position: absolute;
+    top: 85vh;
+    right: 5%;
+    display: none;
+    transition: all 0.3 ease;
+}
+
+@media (max-width: 700px) {
+    .msg, .msg2 {
+        right: 1%;
+    }
+}
+
+.style-msg-vermelho {
+    padding: 15px;
+    border: none;
+    background: red;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.style-msg-verde {
+    padding: 15px;
+    border: none;
+    background: rgb(0, 255, 34);
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: sans-serif;
+}
